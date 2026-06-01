@@ -1,6 +1,6 @@
 /* 1. 기본 스타일 및 갈무리9 폰트 세팅 */
 :root {
-    --primary-color: #4f46e5;    /* 포인트 컬러 */
+    --primary-color: #000000;    /* 포인트 컬러 */
     --background-color: #ffffff; /* 앱 배경 */
     --text-color: #0f172a;       /* 글자 색상 */
     --text-muted: #64748b;       /* 흐린 글자 색상 */
@@ -93,4 +93,82 @@ html, body {
     font-size: 11px;
     color: var(--text-muted);
     margin-top: 15px;
+}
+
+/* ==========================================================================
+   8. 개인정보 처리방침 (Privacy Policy) 전용 스타일
+   ========================================================================== */
+
+/* 뒤로가기 버튼 */
+.header-left {
+    margin-bottom: 15px;
+}
+
+.btn-back {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.btn-back:hover {
+    color: var(--primary-color);
+}
+
+/* 약관 본문 영역 (내부 스크롤 가능하게 설정) */
+.policy-content {
+    flex: 1;
+    overflow-y: auto; /* 내용이 길어지면 이 영역만 스크롤 됨 */
+    padding: 30px 24px;
+    text-align: left; /* 약관은 좌측 정렬이 기본 */
+}
+
+.policy-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--secondary-color);
+}
+
+.policy-date {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.policy-divider {
+    border: 0;
+    height: 1px;
+    background-color: #e2e8f0;
+    margin-bottom: 24px;
+}
+
+/* 각 조항 섹션 */
+.policy-section {
+    margin-bottom: 28px;
+}
+
+.policy-section h2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.policy-section p,
+.policy-section a {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    word-break: keep-all;
+}
+
+/* 약관용 푸터 정렬 */
+.policy-footer {
+    padding: 50px 0;
+    text-align: center;
+    font-size: 11px;
+    color: var(--text-muted);
+    background-color: var(--background-color);
 }
