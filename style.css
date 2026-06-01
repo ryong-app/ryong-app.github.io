@@ -1,0 +1,96 @@
+/* 1. 기본 스타일 및 갈무리9 폰트 세팅 */
+:root {
+    --primary-color: #4f46e5;    /* 포인트 컬러 */
+    --background-color: #ffffff; /* 앱 배경 */
+    --text-color: #0f172a;       /* 글자 색상 */
+    --text-muted: #64748b;       /* 흐린 글자 색상 */
+    --wrapper-bg: #f8fafc;       /* PC로 볼 때 바깥 배경색 */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Galmuri9', sans-serif;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 모바일 전용 뷰포트 레이아웃 */
+.mobile-wrapper {
+    width: 100%;
+    max-width: 450px; /* 모바일 화면 너비 고정 */
+    height: 100%;
+    max-height: 900px; /* 고사양 폰 비율 제한 */
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+/* PC가 아닌 실제 모바일 기기에서는 꽉 차게 변경 */
+@media (max-width: 450px) {
+    body {
+        background-color: var(--background-color);
+    }
+    .mobile-wrapper {
+        max-height: 100vh;
+        box-shadow: none;
+    }
+}
+
+/* 메인 콘텐츠 (중앙 정렬 무드) */
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 세로 중앙 정렬 */
+    align-items: center;
+    text-align: center;
+    padding: 0 30px 80px 30px; /* 하단 버튼 공간 확보를 위한 여백 */
+}
+
+.app-icon {
+    font-size: 64px;
+    margin-bottom: 24px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-title {
+    font-size: 26px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    word-break: keep-all;
+}
+
+.description {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 24px;
+    word-break: keep-all;
+}
+
+.bottom-action {
+    padding: 20px 30px;
+    background-color: var(--background-color);
+}
+
+
+.copyright {
+    text-align: center;
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 15px;
+}
