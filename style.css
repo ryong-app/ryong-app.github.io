@@ -109,6 +109,12 @@ html, body {
    개인정보 처리방침 (Privacy Policy) 전용 스타일
 ==========================================================================
 */
+.policy-wrapper {
+    width: 100%;
+    max-width: 450px;
+    background-color: var(--background-color);
+    margin: auto;
+}
 
 .header-left {
     margin-bottom: 15px;
